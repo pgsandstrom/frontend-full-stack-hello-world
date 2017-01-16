@@ -14,7 +14,7 @@ const Banner = props => (
     {props.children && !Array.isArray(props.children) && <div className="child">{props.children}</div>}
   </header>
 );
-Banner.propTypes = { children: React.PropTypes.array };
+Banner.propTypes = { children: React.PropTypes.any };
 
 
 export default Banner;
