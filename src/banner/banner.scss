@@ -1,0 +1,13 @@
+@import "../../css/color";
+.banner {
+  height: 50px;
+  border-bottom: 3px solid $orange;
+
+  #banner-image {
+    height: 47px;
+    padding-left: 5px;
+  }
+  .child {
+    float: right;
+  }
+}

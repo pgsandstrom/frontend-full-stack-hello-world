@@ -1,0 +1,93 @@
+@import "../../css/color";
+@import "../../css/util";
+.settings-menu {
+
+  .settings-icon {
+    //@extend .center-parent;
+    width: 47px;
+    height: 47px;
+
+    background: $black;
+    border: 1px solid $gray1;
+    cursor: pointer;
+
+    .settings-circle {
+      //@extend .center;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      // Using the .center class makes IE11 produce a scrollbar due to using transform close to the edge of the screen...
+      margin-left: 5px;
+      margin-top: 5px;
+
+      background: white;
+    }
+    .fa-stack {
+      margin-top: 1px;
+      margin-left: -1px;
+    }
+    .fa-user {
+      font-size: 28px;
+      line-height: 28px;
+      color: $gray1;
+    }
+    .fa-gear {
+      margin-top: 5px;
+      margin-left: -5px;
+
+      color: $black;
+    }
+  }
+
+  .dropdown {
+    @extend .dropshadow;
+    position: absolute;
+    right: 0px;
+
+    overflow: hidden;
+    z-index: 100;
+
+    background: white;
+
+    .item {
+      > * {
+        display: inline-block;
+        width: 100%;
+        padding: 7px 25px 7px 10px;
+        color: $black;
+        background: white;
+      }
+      a, button {
+        cursor: pointer;
+        text-align: left;
+      }
+      a:hover, button {
+        color: $black;
+      }
+      span {
+        color: $gray2
+      }
+    }
+    .item:not(:last-child) {
+      > a, > span {
+        border-bottom: solid $gray3 1px;
+      }
+    }
+  }
+
+  // The dropdown animation:
+  .dropdown-enter {
+    max-height: 0;
+  }
+  .dropdown-enter.dropdown-enter-active {
+    max-height: 75px;
+    transition: max-height 100ms ease-in;
+  }
+  .dropdown-leave {
+    max-height: 75px;
+  }
+  .dropdown-leave.dropdown-leave-active {
+    max-height: 0;
+    transition: max-height 200ms ease-in;
+  }
+}
