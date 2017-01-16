@@ -2,6 +2,7 @@ const webpack = require('webpack'); // eslint-disable-line import/no-extraneous-
 const path = require('path');
 
 module.exports = {
+  devtool: 'source-map',
   entry: ['whatwg-fetch', 'babel-polyfill', './src/entry.jsx'],
   output: { path: path.join(__dirname, '/assets/'), filename: 'bundle_prod.js' },
   module: {
