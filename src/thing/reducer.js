@@ -11,6 +11,6 @@ export default (state = initialState, action) => {
     case DECREASE:
       return { ...state, myCounter: state.myCounter - action.payload.amount };
     default:
-      return { ...state };
+      return state;
   }
 };
